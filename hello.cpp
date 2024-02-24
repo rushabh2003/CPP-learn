@@ -1,20 +1,11 @@
 #include <iostream>
 using namespace std;
-
-namespace one
-{
-    int x = 1;
-}
-
-namespace two
-{
-    int x = 2;
-}
-
+typedef string sttr;
+using op = int;
 int main()
 {
-    
-    using namespace two;
-    cout << x;
-    return 0;
+    sttr a = "Alpha";
+    cout << a << endl;
+    op t = 3; 
+    cout << t;
 }
