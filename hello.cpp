@@ -3,12 +3,14 @@ using namespace std;
 
 int main()
 {
-    //type conversion
+    //cin (input operator)
+    int t;
+    string name;
+    cout<<"please enter your name \n";
+    getline(cin , name );// for taking spaced inputs
+    cout<<"\n Please enter your age \n";
+    cin>>t; // for taking single or conjoint inputs
+    cout<<"My full name is "<< name << endl;
+    cout<<"\nI am "<<t << "years old";
 
-    int x = 2.71;// Implicit type conversion from double to int
-    cout<<x<<endl;
-    int score = 9;
-    int questions = 10;
-    double result = (double)score/questions * 100; // Explicit type conversion
-    cout<<result;
 }
