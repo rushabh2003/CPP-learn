@@ -1,16 +1,20 @@
 #include <iostream>
 using namespace std;
+
+namespace one
+{
+    int x = 1;
+}
+
+namespace two
+{
+    int x = 2;
+}
+
 int main()
 {
-//comments
-/*
-Multiline comments
-*/
-int x =5 ;//declaration
-double y = 1.41;
-char a = 'A';
-bool Light = true;
-string A = " I am groot";
-cout<<"I am integer : \n"<<x<<"\nI am decimal(double) : \n"<<y<<"\nI am a character\n"<<a<<"\nI am boolean\n"<<Light<<"\nI am a string : \n"<<A;
+    
+    using namespace two;
+    cout << x;
     return 0;
 }
