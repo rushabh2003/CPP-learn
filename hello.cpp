@@ -1,11 +1,26 @@
 #include <iostream>
 using namespace std;
-typedef string sttr;
-using op = int;
+
 int main()
 {
-    sttr a = "Alpha";
-    cout << a << endl;
-    op t = 3; 
-    cout << t;
+    //arithematic operators
+    //(+,-,*,/)
+    int a = 3;
+    //addition
+    a=a+1;
+    //or a+=1
+    //or a++
+    int b = 5;
+    //subtraction
+    b = b - 2;
+    //or b -= 2
+    //or b--
+    //Similarly multiplication and division are performed
+
+    cout<<a<<"\n"<<b;
+
+    /*
+    operator precedence
+    parenthesis() > multiplication > division > addition > subtraction
+    */
 }
