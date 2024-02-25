@@ -1,25 +1,36 @@
 #include <stdio.h>
+#include <ctype.h> // For isalpha() and isdigit()
 
 int main() {
-    char input[100]; // Assuming the statement won't exceed 99 characters + null terminator
-    int i = 0;
+    char ch; // To hold each character input
+    char alphabets[100], digits[100], specialChars[100], operators[100];
+    int alphaIndex = 0, digitIndex = 0, specialIndex = 0, operatorIndex = 0;
+    
+    printf("Enter a statement: ");
 
-    printf("Enter a statement (no spaces): ");
-    scanf("%99s", input); // Read the input statement
-
-    printf("Variables: ");
-    for (i = 0; input[i] != '\0'; i++) {
-        if ((input[i] >= 'a' && input[i] <= 'z') || (input[i] >= 'A' && input[i] <= 'Z')) { // Check if it's a letter
-            printf("%c", input[i]);
+    // Reading character by character until newline is encountered
+    while(scanf("%c", &ch) && ch != '\n') {
+        if (isalpha(ch)) {
+            alphabets[alphaIndex++] = ch;
+        } else if (isdigit(ch)) {
+            digits[digitIndex++] = ch;
+        } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+            operators[operatorIndex++] = ch;
+        } else {
+            specialChars[specialIndex++] = ch;
         }
     }
+    
+    // Null-terminating the strings
+    alphabets[alphaIndex] = '\0';
+    digits[digitIndex] = '\0';
+    specialChars[specialIndex] = '\0';
+    operators[operatorIndex] = '\0';
 
-    printf("\nOperations: ");
-    for (i = 0; input[i] != '\0'; i++) {
-        if (input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/') { // Check if it's an arithmetic operator
-            printf("%c ", input[i]); // Print the operation with a space for readability
-        }
-    }
+    printf("Alphabets: %s\n", alphabets);
+    printf("Digits: %s\n", digits);
+    printf("Special Characters: %s\n", specialChars);
+    printf("Arithmetic Operators: %s\n", operators);
 
     return 0;
 }
