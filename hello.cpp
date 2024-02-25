@@ -1,36 +1,22 @@
-#include <stdio.h>
-#include <ctype.h> // For isalpha() and isdigit()
-
-int main() {
-    char ch; // To hold each character input
-    char alphabets[100], digits[100], specialChars[100], operators[100];
-    int alphaIndex = 0, digitIndex = 0, specialIndex = 0, operatorIndex = 0;
-    
-    printf("Enter a statement: ");
-
-    // Reading character by character until newline is encountered
-    while(scanf("%c", &ch) && ch != '\n') {
-        if (isalpha(ch)) {
-            alphabets[alphaIndex++] = ch;
-        } else if (isdigit(ch)) {
-            digits[digitIndex++] = ch;
-        } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
-            operators[operatorIndex++] = ch;
+#include <iostream>
+using namespace std;
+void collatzSequence(unsigned long n) {
+    while (n != 1) {
+        cout<<n<<endl;
+        if (n % 2 == 0) {
+            n = n / 2;
         } else {
-            specialChars[specialIndex++] = ch;
+            n = 3 * n + 1;
         }
     }
-    
-    // Null-terminating the strings
-    alphabets[alphaIndex] = '\0';
-    digits[digitIndex] = '\0';
-    specialChars[specialIndex] = '\0';
-    operators[operatorIndex] = '\0';
+    cout<<n<<"\n"<<endl; // Print the last number in the sequence, which is 1
+}
 
-    printf("Alphabets: %s\n", alphabets);
-    printf("Digits: %s\n", digits);
-    printf("Special Characters: %s\n", specialChars);
-    printf("Arithmetic Operators: %s\n", operators);
-
+int main() {
+    unsigned long n;
+    cout<<"Enter a positive integer: "<<endl;
+    cin>>n;;
+    cout<<"The 3n + 1 sequence starting at "<<n<<" is"<<endl;
+    collatzSequence(n);
     return 0;
 }
