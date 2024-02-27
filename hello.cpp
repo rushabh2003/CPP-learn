@@ -1,17 +1,14 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-int gcd(int a,int b){
-    if(b == 0){
-        return a;
-    }else{
-        return gcd(b,a%b);
-    }
-
-}
 int main(){
-    int a,b;
+    double a,b;
+    cout<<"Enter Two Numbers"<<endl;
     cin>>a>>b;
-    int c = gcd(a,b);
+    cout<<"The bigger number is  "<< max(a,b)<<endl;
+    cout<<"The smaller number is "<<min(a,b)<<endl;
+    cout<<"The a power b is "<<pow(a,b)<<endl;
+    cout<<"Square Root of A is "<<sqrt(a)<<endl;
+    //some useful functions are abs - absolute ,ceil() - upper rounding floor- downward rounding
 
-    cout<<c;
 }
