@@ -2,10 +2,10 @@
 #include <cmath>
 using namespace std;
 int main(){
-    string a;
-    while(a.empty()){
-        cout<<"Enter your name :"<<endl;
-        getline(cin,a);
-    }
-    cout<<"Hello "<<a;
+    int a;
+    do{
+        cout<<"Enter a positive no  :"<<endl;
+        cin>>a;
+    }while(a < 0);
+    cout<<"The number is :"<<a;
 }
