@@ -2,8 +2,15 @@
 #include <cmath>
 using namespace std;
 int main(){
-    int price;
-    cout<<"Enter the price of item "<<endl;
-    cin>>price;
-    price>1000?cout<<"expensive":cout<<"Inexpensive";
+    //Logical operators and(&&) , or(||) and not(!)
+    cout<<"Enter a number "<<endl;
+    int a;
+    cin>>a;
+    if(a>18 && a<60){
+        cout<<"Go work"<<endl;
+    }else if(a<18 || a>60){
+        cout<<"Enjoy yourself "<<endl;
+    }else{
+        cout<<"Not operator is !"<<endl;
+    }
 }
