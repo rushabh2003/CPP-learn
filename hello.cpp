@@ -2,10 +2,7 @@
 #include <cmath>
 using namespace std;
 int main(){
-    int a;
-    do{
-        cout<<"Enter a positive no  :"<<endl;
-        cin>>a;
-    }while(a < 0);
-    cout<<"The number is :"<<a;
+    for(int i = 0; i <= 10; i++){//for loop takes starting index,ending index and increment/decreement option
+        cout<<"Radhe \n";
+    }
 }
