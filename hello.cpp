@@ -1,10 +1,8 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-void Alpha(int n){
-    n -= 3;
-    cout<<n;
-}
 int main(){
-    Alpha(6);
+    //Arrays in Cpp
+    string  rga[] = {"rushabh","Om","Shambhu"};
+    cout<<rga[2];    
 }
