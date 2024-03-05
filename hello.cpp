@@ -1,13 +1,22 @@
 #include <iostream>
 using namespace std;
+void passByValue(int x)
+{
+    x++;
+    cout<<"The value of (a) pass by value  is "<<x<<endl;
+}
+void passByRef(int &y)
+{
+    y++;
+    cout<<"The value of (b) pass by reference is "<<y<<endl;
+}
 
 int main()
 {
-    //Memory addresses and pointers in cpp
-    int a = 1729;
-    int *ptr;//creating a pointer
-    ptr = &a;//storing address of variable into the pointer
-    cout<<"The given value is "<<a<<endl;
-    cout<<"The value is stored at "<<ptr<<endl;//hexadecimal memory address is returned
-    cout<<"The pointer points to the value  "<<*ptr<<endl;
+    // Pass by Value and Pass by refference
+    int a = 3,b = 5;
+    passByValue(a);
+    cout<<"The value of a is "<<a<<endl;
+    passByRef(b);
+    cout<<"The value of b is "<<b<<endl;
 }
