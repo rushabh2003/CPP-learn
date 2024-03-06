@@ -3,13 +3,18 @@ using namespace std;
 
 int main()
 {
-    //dynamic memory for single object
-    
-    int *ptr = new int; //allocating memory for int
-    *ptr = 5; //Assigning the value to  allocated memory
-    cout << "The value stored at dynamically allocated int is " << *ptr << endl;//Using the value
-    cout << "The address of value stored at dynamically allocated int is " << ptr;
-    delete ptr;//free the allocated memory 
-    ptr = nullptr; //Best practice to avoid undefined behaviour
+    //dynamic memory for arrays
+
+    int *arr = new int[10];//allocating dynamic memory for arrays
+    for(int i = 0; i < 10; ++i){ //initialize the array
+        arr[i] = i*i;
+    }
+    for(int i = 0; i < 10; ++i){ //using the array
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+    delete[] arr;//free the allocated memory 
+    arr = nullptr; //Best practice to avoid undefined behaviour
     return 0;
 }
