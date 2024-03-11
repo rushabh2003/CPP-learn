@@ -1,21 +1,10 @@
 #include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
 
-int fact(int x)
-{
-    if (x == 0)//base case
-    {
-        return 1;
-    }
-    else
-    {
-        return x * fact(x - 1);//The function calls itself
-    }
-}
+using namespace std;
+//lets start STL - Standard Template Library
 int main()
 {
-    // recursion
-    int a = 5;
-    cout<<"The factorial of  "<<a<<" is "<<fact(a);
-    return 0;
+    pair<int, int> t = {1, 2};
+    cout<<t.first<<endl<<t.second;
 }
