@@ -3,10 +3,15 @@
 
 using namespace std;
 //lets start STL - Standard Template Library
-int main()
-{
-    pair<int, pair<int,int>> t ;
-    cout<<"Enter values to pair : ";
-    cin>>t.first>>t.second.first;
-    cout<<t.first<<endl<<t.second.first;
+int main() {
+    // An array of pair objects
+    std::pair<int, std::string> pairArray[] = {{1, "One"}, {2, "Two"}, {3, "Three"}};
+
+    // Iterating over the array of pairs
+    for (const auto &p : pairArray) {
+        std::cout << "First Element: " << p.first << ", Second Element: " << p.second << std::endl;
+    }
+
+    return 0;
 }
+
