@@ -5,8 +5,8 @@ using namespace std;
 //lets start STL - Standard Template Library
 int main()
 {
-    pair<int, int> t ;
+    pair<int, pair<int,int>> t ;
     cout<<"Enter values to pair : ";
-    cin>>t.first>>t.second;
-    cout<<t.first<<endl<<t.second;
+    cin>>t.first>>t.second.first;
+    cout<<t.first<<endl<<t.second.first;
 }
